@@ -18,20 +18,22 @@ const computedFields = {
 
 export const Project = defineDocumentType(() => ({
 	name: "Project",
-	filePathPattern: "./projects/**/*.mdx",
+	filePathPattern: "./**/*.mdx",
 	contentType: "mdx",
 
 	fields: {
 		published: {
 			type: "boolean",
 		},
+		title: { type: 'string' },
+    date: { type: 'date' },
 		title: {
 			type: "string",
-			required: true,
+			required: false,
 		},
 		description: {
 			type: "string",
-			required: true,
+			required: false,
 		},
 		date: {
 			type: "date",
